@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>Prathamsinh</title>
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="home" id="home">
+
+            <div class="navbar">
+                <h2><span class="redAlpha">P</span>ratham</h2>
+                <div class="navLinks">
+                    <h3 class="linkOpen"><a href="#home" id="exp"><span class="redAlpha">H</span>ome</a></h3>
+                    <h3 class="linkOpen"><a href="#about" id="exp"><span class="redAlpha">A</span>bout</a></h3>
+                    <h3 class="linkOpen"><a href="#projects" id="exp"><span class="redAlpha">P</span>rojects</a></h3>
+                    <h3 class="linkOpen"><a href="#experience" id="exp"><span class="redAlpha">E</span>xperience</a>
+                    </h3>
+                    <h3 class="linkOpen"><a href="#contact" id="exp"><span class="redAlpha">C</span>ontact</a></h3>
+                </div>
+                <div class="menu-icon">
+                    <i class="ri-menu-3-fill" onclick="toggleMenu()"></i>
+                </div>
+            </div>
+
+            <script>
+                // LOGIC FOR NAVBAR TOGGLE   (Start)
+                let navbar = document.querySelector('.navbar')
+                let navLinks = document.querySelector('.navLinks')
+
+                let experience = document.querySelectorAll('#exp')
+
+                // console.log(experience);
+
+                experience.forEach(function (item) {
+                    console.log(item);
+                    item.addEventListener('click', function () {
+                        navLinks.style.maxHeight = '0px';
+                        navbar.style.backgroundColor = 'transparent'
+                    })
+                })
+
+                navLinks.style.maxHeight = '0px'
+
+                function toggleMenu() {
+                    if (navLinks.style.maxHeight === '0px') {
+                        navbar.style.backgroundColor = 'black';
+                        navLinks.style.maxHeight = '320px'
+
+                    }
+                    else {
+                        navbar.style.backgroundColor = 'transparent';
+                        navLinks.style.maxHeight = '0px'
+                    }
+                }
+
+                // LOGIC FOR NAVBAR TOGGLE   (End)
+            </script>
+
+
+
+            <div class="content">
+                <div class="left">
+                    <h3 id="name" data-aos="fade-down">Prathamsinh Parmar</h3>
+                    <h1 id="software" data-aos="fade-up">I<span class="redAlpha">'</span>M A <span
+                            class="redAlpha">F</span>ull <span class="redAlpha">S</span>tack</h1>
+                    <h1 id="Engineer" data-aos="fade-down"><span class="redAlpha">W</span>eb <span
+                            class="redAlpha">D</span>eveloper</h1>
+                    <p data-aos="fade-up">Hello I'm B.Tech IT student passionate about full-stack development and AI,
+                        building smart
+                        digital solutions.
+                    </p>
+                    <a href="#about" data-aos="fade-up-left"><button type="submit">Explore More</button></a>
+                </div>
+
+                <div class="right">
+                    <img src="indexImage.jpg" alt="Pratham Photo" data-aos="fade-up-right">
+                </div>
+            </div>
+        </div>
+
+        <div class="about" id="about" data-aos="fade-down">
+            <div class="leftAbout">
+                <img src="about section image.jpg" alt="">
+            </div>
+            <div class="rightAbout">
+                <h1><span class="redAlpha">a</span>bout <span class="redAlpha">m</span>e</h1>
+                <p>A dedicated B.Tech IT student passionate about full-stack web development and artificial
+                    intelligence. Focused on building real-world digital solutions by combining clean code, creativity,
+                    and modern technologies.</p>
+                <div class="tab-links">
+                    <h3 id="skill">Skills</h3>
+                    <h3 id="edu">Education</h3>
+                    <!-- <a href="" id="skill">Skills</a>
+                    <a href="" id="edu">Education</a> -->
+                </div>
+                <div class="link-content skills">
+                    <h3><span class="redAlpha">W</span>eb <span class="redAlpha">D</span>evelopment
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>tailwind CSS</li>
+                        <li>JavaScript</li>
+                        <li>React JS</li>
+                    </h3>
+                    <!-- <h3>git <br>GitHub <br>GitLab</h3> -->
+                    <h3><span class="redAlpha">L</span>anguages
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>MySQL</li>
+                    </h3>
+                </div>
+
+                <div class="link-content education">
+                    <h3><span class="redAlpha">D</span>rs. <span class="redAlpha">K</span>iran & <span
+                            class="redAlpha">P</span>allavi <span class="redAlpha">P</span>atel <span
+                            class="redAlpha">G</span>lobal <span class="redAlpha">U</span>niversity
+                        <li style="list-style: none;">B.Tech - Information Technology</li>
+                        <li style="list-style: none;">Aug 2023 - Jun 2027</li>
+                    </h3>
+                    <!-- <h3>git <br>GitHub <br>GitLab</h3> -->
+                    <h3><span class="redAlpha">A</span>diti <span class="redAlpha">S</span>cience <span
+                            class="redAlpha">S</span>chool
+                        <li style="list-style: none;">Higher Secondary Education (11th & 12th Science)</li>
+                        <li style="list-style: none;">May 2021 - jun 2023</li>
+                    </h3>
+
+                    <h3><span class="redAlpha">S</span>hah N. B. <span class="redAlpha">S</span>arvjanik <span
+                            class="redAlpha">H</span>ighchool
+                        <li style="list-style: none;">All Primary Education & Secondary School Education </li>
+                        <li style="list-style: none;">Jun 2008 - May 2021</li>
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="project">
+            <section id="projects" data-aos="fade-up">
+                <h2 class="section-title"><span class="redAlpha">P</span>rojects</h2>
+                <div class="projects-container">
+
+                    <!-- Project 1 -->
+                    <div class="project-card" data-aos="zoom-out-right">
+                        <img src="zenfluence.png" alt="Zenfluence">
+                        <div class="project-content">
+                            <h3><span class="redAlpha">Z</span>enfluence <span class="redAlpha">M</span>arketing</h3>
+                            <p>creative marketing agency helping brands grow through smart strategy and bold execution.
+                            </p>
+                            <div class="tech-stack">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/PrathamsinhParmar/SCT_WD_1/" target="_main">GitHub</a>
+                                <a href="https://prathamsinhparmar.github.io/SCT_WD_1/" target="_main">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card" data-aos="zoom-out-down">
+                        <img src="quiz.png" alt="Quiz Game">
+                        <div class="project-content">
+                            <h3><span class="redAlpha">I</span>nteractive <span class="redAlpha">Q</span>uiz</h3>
+                            <p>A fun and engaging way to learn, compete, and prove how smart you really are.</p>
+                            <div class="tech-stack">
+                                <span>HTML</span><span>JS</span><span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/PrathamsinhParmar/SCT_WD_3/" target="_main">GitHub</a>
+                                <a href="https://prathamsinhparmar.github.io/SCT_WD_3/" target="_main">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card" data-aos="zoom-out-left">
+                        <img src="digitalclock.png" alt="Digital Clock">
+                        <div class="project-content">
+                            <h3><span class="redAlpha">S</span>top <span class="redAlpha">W</span>atch</h3>
+                            <p>A simple and precise stopwatch to track time for any activity.</p>
+                            <div class="tech-stack">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/PrathamsinhParmar/SCT_WD_2/" target="_main">GitHub</a>
+                                <a href="https://prathamsinhparmar.github.io/SCT_WD_2/" target="_main">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card" data-aos="zoom-out-right">
+                        <img src="taskmanager.png" alt="taskmanager">
+                        <div class="project-content">
+                            <h3><span class="redAlpha">T</span>ask <span class="redAlpha">M</span>anager <span
+                                    class="redAlpha">A</span>pp</h3>
+                            <p>A clean and efficient task manager to help you plan, track, and complete your daily
+                                goals.</p>
+                            <div class="tech-stack">
+                                <span>HTML</span><span>JavaScript</span><span>CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/PrathamsinhParmar/SCT_WD_4/tree/master"
+                                    target="_main">GitHub</a>
+                                <a href="https://prathamsinhparmar.github.io/SCT_WD_4/" target="_main">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card" data-aos="zoom-out-down">
+                        <img src="notesapp.png" alt="Notes App">
+                        <div class="project-content">
+                            <h3><span class="redAlpha">N</span>otes <span class="redAlpha">W</span>eb <span
+                                    class="redAlpha">A</span>pp</h3>
+                            <p>A minimal notes app to jot down ideas, reminders, and to-dos anytime.</p>
+                            <div class="tech-stack">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/PrathamsinhParmar/JavaScript-Mini-Projects/blob/main/NotesApp.html"
+                                    target="_main">GitHub</a>
+                                <a href="https://prathamsinhparmar.github.io/JavaScript-Mini-Projects/NotesApp.html"
+                                    target="_main">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card" data-aos="zoom-out-left">
+                        <img src="ebookhub.png" alt="Ebookhub">
+                        <div class="project-content">
+                            <h3><span class="redAlpha">E</span>bookHub</h3>
+                            <p>EbookHub is your go-to platform for downloading free IT and computer science eBooks.</p>
+                            <div class="tech-stack">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" target="_main">GitHub</a>
+                                <a href="#" target="_main">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <div class="exp">
+            <section id="experience" class="experience-section" data-aos="fade-up">
+                <h2><span class="redAlpha">E</span>xperience</h2>
+                <div class="experience-container">
+
+                    <!-- Experience 1 -->
+                    <div class="experience-card" data-aos="fade-right" data-aos="fade-up-right">
+                        <h3>Edunet Foundation</h3>
+                        <p class="position"><span class="redAlpha">A</span>rtificial<span class="redAlpha">I</span>
+                            Intelligence<span class="redAlpha"> I</span>ntern</p>
+                        <p class="date">June 2025 – Present</p>
+                        <ul>
+                            <li>Understood the fundamentals of Artificial Intelligence and Machine Learning</li>
+                            <li>Gained hands-on experience working with real-world datasets</li>
+                            <li>Built and evaluated basic machine learning models using Python</li>
+                            <!-- <li>Participated in interactive sessions, assignments, and mentorship-driven learning -->
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Experience 2 -->
+                    <div class="experience-card" data-aos="fade-left" data-aos="fade-up-left">
+                        <h3>ShadowFox</h3>
+                        <p class="position"><span class="redAlpha">W</span>eb <span class="redAlpha">D</span>evelopment
+                            <span class="redAlpha">I</span>ntern
+                        </p>
+                        <p class="date">July 2025 – Present</p>
+                        <ul>
+                            <li>Worked with HTML, CSS, and JavaScript to improve user experience.</li>
+                            <li>Optimized site for mobile responsiveness and performance.</li>
+                            <li>Learned industry practices like version control using Git</li>
+                            <!-- <li>Improved problem-solving and debugging skills through practical tasks</li> -->
+                        </ul>
+                    </div>
+
+
+                </div>
+            </section>
+        </div>
+
+
+        <div class="contactForm">
+            <section id="contact" class="contact-section" data-aos="fade-down">
+                <h2><span class="redAlpha">C</span>ontact <span class="redAlpha">M</span>e</h2>
+                <p class="contact-subtext">Let's connect! Feel free to reach out for collaborations or just to say
+                    hello.</p>
+
+                <div class="contact-wrapper">
+
+                    <!-- Contact Info -->
+                    <div class="contact-left">
+                        <div class="contact-info">
+                            <p><strong>Email : </strong> <a
+                                    href="mailto:prthamsinhparmar0@gmail.com">prthamsinhparmar0@gmail.com</a></p>
+                            <p><strong>Location : </strong><a
+                                    href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.580196329689!2d73.117256!3d22.055216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc8fbf66c2db1%3A0x839437b6224d0f6d!2sKarjan%2C%20Gujarat%2C%20India!5e0!3m2!1sen!2sin!4v1720089543010"
+                                    target="_main">Karjan, Vadodara, Gujarat</a></p>
+                            <p><strong>LinkedIn : </strong> <a
+                                    href="https://www.linkedin.com/in/prathamsinhparmar-2162a2300" target="_blank">View
+                                    Profile</a></p>
+                        </div>
+
+                        <!-- Contact Form -->
+                        <form action="https://formspree.io/f/xyyvlabc" method="POST" class="contact-form">
+                            <input type="text" name="name" placeholder="Your Name" required />
+                            <input type="email" name="email" placeholder="Your Email" required />
+                            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                            <button type="submit">Send Message</button>
+                        </form>
+
+                    </div>
+
+                    <!-- Embedded Google Map -->
+                    <div class="contact-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.580196329689!2d73.117256!3d22.055216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc8fbf66c2db1%3A0x839437b6224d0f6d!2sKarjan%2C%20Gujarat%2C%20India!5e0!3m2!1sen!2sin!4v1720089543010"
+                            width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+
+
+        <footer class="footer" data-aos="fade-up">
+            <div class="footer-container">
+
+                <div class="footer-top">
+                    <div class="footer-info">
+                        <h3><span class="redAlpha">P</span>rathamsinh <span class="redAlpha">P</span>armar</h3>
+                        <p>Full-Stack Developer • AI Enthusiast</p>
+                    </div>
+
+                    <div class="footer-actions">
+                        <!-- Resume Button -->
+                        <a href="assets/Prathamsinh_Resume.pdf" class="resume-btn" download target="_blank">
+                            <i class="fas fa-file-download"></i> Resume
+                        </a>
+
+                        <!-- Social Media Icons -->
+                        <div class="footer-socials">
+                            <a href="https://www.linkedin.com/in/prathamsinhparmar-2162a2300" target="_blank"
+                                aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/prathamsinhparmar" target="_blank" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <p class="footer-credit">© 2025 Prathamsinh Parmar. Crafted with care in Gujarat, India.</p>
+            </div>
+        </footer>
+
+
+    </div>
+</body>
+
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000, // animation duration in ms
+        once: true      // animate only once while scrolling down
+    });
+
+</script>
+
+</html>
