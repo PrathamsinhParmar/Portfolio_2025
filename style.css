@@ -999,7 +999,7 @@ hr {
     .rightAbout .skills {
         font-size: 4vw;
         display: block;
-        height: auto;
+        /* height: auto; */
         /* transition: 0.5s all; */
     }
 
@@ -1010,7 +1010,7 @@ hr {
 
     .rightAbout .education {
         font-size: 4vw;
-        height: auto;
+        /* height: auto; */
         /* transition: 0.2s all; */
     }
 
