@@ -29,8 +29,8 @@
                     </h3>
                     <h3 class="linkOpen"><a href="#contact" id="exp"><span class="redAlpha">C</span>ontact</a></h3>
                 </div>
-                <div class="menu-icon">
-                    <i class="ri-menu-3-fill" onclick="toggleMenu()"></i>
+                <div class="menu-icon" id="toggleIcon">
+                    <i class="ri-menu-3-fill " onclick="toggleMenu()" id="icon"></i>
                 </div>
             </div>
 
@@ -38,9 +38,10 @@
                 // LOGIC FOR NAVBAR TOGGLE   (Start)
                 let navbar = document.querySelector('.navbar')
                 let navLinks = document.querySelector('.navLinks')
-
+                let toggleIcon = document.querySelector('#toggleIcon')
+                let icon = document.querySelector('#icon')
                 let experience = document.querySelectorAll('#exp')
-
+                console.log(Array.from(toggleIcon.children));
                 // console.log(experience);
 
                 experience.forEach(function (item) {
@@ -48,6 +49,7 @@
                     item.addEventListener('click', function () {
                         navLinks.style.maxHeight = '0px';
                         navbar.style.backgroundColor = 'transparent'
+                        toggleIcon.style.rotate = '0deg'
                     })
                 })
 
@@ -55,6 +57,8 @@
 
                 function toggleMenu() {
                     if (navLinks.style.maxHeight === '0px') {
+                        toggleIcon.style.rotate = '90deg'
+                        icon.style.color = ' #b8b4af';
                         navbar.style.backgroundColor = 'black';
                         navLinks.style.maxHeight = '320px'
 
@@ -62,6 +66,8 @@
                     else {
                         navbar.style.backgroundColor = 'transparent';
                         navLinks.style.maxHeight = '0px'
+                        toggleIcon.style.rotate = '0deg'
+                         icon.style.color = 'magenta';
                     }
                 }
 
@@ -106,7 +112,7 @@
                     <a href="" id="edu">Education</a> -->
                 </div>
                 <div class="link-content skills">
-                    <h3><span class="redAlpha">W</span>eb <span class="redAlpha">D</span>evelopment
+                    <h3>Web Development
                         <li>HTML5</li>
                         <li>CSS3</li>
                         <li>tailwind CSS</li>
@@ -114,7 +120,7 @@
                         <li>React JS</li>
                     </h3>
                     <!-- <h3>git <br>GitHub <br>GitLab</h3> -->
-                    <h3><span class="redAlpha">L</span>anguages
+                    <h3>Languages
                         <li>C</li>
                         <li>C++</li>
                         <li>Java</li>
@@ -124,21 +130,17 @@
                 </div>
 
                 <div class="link-content education">
-                    <h3><span class="redAlpha">D</span>rs. <span class="redAlpha">K</span>iran & <span
-                            class="redAlpha">P</span>allavi <span class="redAlpha">P</span>atel <span
-                            class="redAlpha">G</span>lobal <span class="redAlpha">U</span>niversity
+                    <h3>Drs. Kiran & Pallavi Patel Global University
                         <li style="list-style: none;">B.Tech - Information Technology</li>
                         <li style="list-style: none;">Aug 2023 - Jun 2027</li>
                     </h3>
                     <!-- <h3>git <br>GitHub <br>GitLab</h3> -->
-                    <h3><span class="redAlpha">A</span>diti <span class="redAlpha">S</span>cience <span
-                            class="redAlpha">S</span>chool
+                    <h3>Aditi Science School
                         <li style="list-style: none;">Higher Secondary Education (11th & 12th Science)</li>
                         <li style="list-style: none;">May 2021 - jun 2023</li>
                     </h3>
 
-                    <h3><span class="redAlpha">S</span>hah N. B. <span class="redAlpha">S</span>arvjanik <span
-                            class="redAlpha">H</span>ighchool
+                    <h3>Shah N. B. Sarvjanik Highchool
                         <li style="list-style: none;">All Primary Education & Secondary School Education </li>
                         <li style="list-style: none;">Jun 2008 - May 2021</li>
                     </h3>
@@ -156,7 +158,7 @@
                     <div class="project-card" data-aos="zoom-out-right">
                         <img src="zenfluence.png" alt="Zenfluence">
                         <div class="project-content">
-                            <h3><span class="redAlpha">Z</span>enfluence <span class="redAlpha">M</span>arketing</h3>
+                            <h3>Zenfluence Marketing</h3>
                             <p>creative marketing agency helping brands grow through smart strategy and bold execution.
                             </p>
                             <div class="tech-stack">
@@ -173,7 +175,7 @@
                     <div class="project-card" data-aos="zoom-out-down">
                         <img src="quiz.png" alt="Quiz Game">
                         <div class="project-content">
-                            <h3><span class="redAlpha">I</span>nteractive <span class="redAlpha">Q</span>uiz</h3>
+                            <h3>Interactive Quiz</h3>
                             <p>A fun and engaging way to learn, compete, and prove how smart you really are.</p>
                             <div class="tech-stack">
                                 <span>HTML</span><span>JS</span><span>JavaScript</span>
@@ -189,7 +191,7 @@
                     <div class="project-card" data-aos="zoom-out-left">
                         <img src="digitalclock.png" alt="Digital Clock">
                         <div class="project-content">
-                            <h3><span class="redAlpha">S</span>top <span class="redAlpha">W</span>atch</h3>
+                            <h3>Stop Watch</h3>
                             <p>A simple and precise stopwatch to track time for any activity.</p>
                             <div class="tech-stack">
                                 <span>HTML</span><span>CSS</span><span>JavaScript</span>
@@ -205,7 +207,7 @@
                     <div class="project-card" data-aos="zoom-out-right">
                         <img src="taskmanager.png" alt="taskmanager">
                         <div class="project-content">
-                            <h3><span class="redAlpha">T</span>ask <span class="redAlpha">M</span>anager <span
+                            <h3>Task Manager <span
                                     class="redAlpha">A</span>pp</h3>
                             <p>A clean and efficient task manager to help you plan, track, and complete your daily
                                 goals.</p>
@@ -224,8 +226,7 @@
                     <div class="project-card" data-aos="zoom-out-down">
                         <img src="notesapp.png" alt="Notes App">
                         <div class="project-content">
-                            <h3><span class="redAlpha">N</span>otes <span class="redAlpha">W</span>eb <span
-                                    class="redAlpha">A</span>pp</h3>
+                            <h3>Notes Web App</h3>
                             <p>A minimal notes app to jot down ideas, reminders, and to-dos anytime.</p>
                             <div class="tech-stack">
                                 <span>HTML</span><span>CSS</span><span>JavaScript</span>
@@ -243,7 +244,7 @@
                     <div class="project-card" data-aos="zoom-out-left">
                         <img src="ebookhub.png" alt="Ebookhub">
                         <div class="project-content">
-                            <h3><span class="redAlpha">E</span>bookHub</h3>
+                            <h3>EbookHub</h3>
                             <p>EbookHub is your go-to platform for downloading free IT and computer science eBooks.</p>
                             <div class="tech-stack">
                                 <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span>
@@ -267,8 +268,8 @@
                     <!-- Experience 1 -->
                     <div class="experience-card" data-aos="fade-right" data-aos="fade-up-right">
                         <h3>Edunet Foundation</h3>
-                        <p class="position"><span class="redAlpha">A</span>rtificial<span class="redAlpha">I</span>
-                            Intelligence<span class="redAlpha"> I</span>ntern</p>
+                        <p class="position">Artificial
+                            Intelligence Intern</p>
                         <p class="date">June 2025 – Present</p>
                         <ul>
                             <li>Understood the fundamentals of Artificial Intelligence and Machine Learning</li>
@@ -283,8 +284,8 @@
                     <!-- Experience 2 -->
                     <div class="experience-card" data-aos="fade-left" data-aos="fade-up-left">
                         <h3>ShadowFox</h3>
-                        <p class="position"><span class="redAlpha">W</span>eb <span class="redAlpha">D</span>evelopment
-                            <span class="redAlpha">I</span>ntern
+                        <p class="position">Web Development
+                            Intern
                         </p>
                         <p class="date">July 2025 – Present</p>
                         <ul>
@@ -359,7 +360,7 @@
 
                     <div class="footer-actions">
                         <!-- Resume Button -->
-                        <a href="assets/Prathamsinh_Resume.pdf" class="resume-btn" download target="_blank">
+                        <a href="Prathamsinh Parmar Final Resume.pdf" class="resume-btn" download target="_blank">
                             <i class="fas fa-file-download"></i> Resume
                         </a>
 

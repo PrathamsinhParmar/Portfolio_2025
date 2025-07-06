@@ -279,12 +279,21 @@ body {
     /* height: 250px; */
     z-index: 45;
 }
+.rightAbout .skills h3{
+    color: magenta;
+}
+.rightAbout .skills h3 li{
+    color: #b8b4af;
+}
 
 /* .rightAbout .skills{
     display: none;
 } */
 .rightAbout .education {
     display: none;
+}
+.rightAbout .education h3{
+    color: magenta;
 }
 
 .rightAbout .education {
@@ -295,6 +304,7 @@ body {
 .rightAbout .education h3 li {
     list-style: none;
     padding-left: 1vw;
+    color: #b8b4af;
 }
 
 .rightAbout .link-content h3 {
@@ -369,6 +379,7 @@ body {
 .project-content h3 {
     margin-top: 0;
     color: #b8b4af;
+    color: magenta;
 }
 
 .project-content p {
