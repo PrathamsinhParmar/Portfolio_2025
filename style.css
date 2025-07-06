@@ -80,11 +80,11 @@ body {
     font-size: 2.3vw;
 }
 
-.menu-icon{
+.menu-icon {
     display: none;
 }
 
-.menu-icon i{
+.menu-icon i {
     font-size: 6vw;
     font-weight: 700;
     color: magenta;
@@ -279,10 +279,12 @@ body {
     /* height: 250px; */
     z-index: 45;
 }
-.rightAbout .skills h3{
+
+.rightAbout .skills h3 {
     color: magenta;
 }
-.rightAbout .skills h3 li{
+
+.rightAbout .skills h3 li {
     color: #b8b4af;
 }
 
@@ -292,7 +294,8 @@ body {
 .rightAbout .education {
     display: none;
 }
-.rightAbout .education h3{
+
+.rightAbout .education h3 {
     color: magenta;
 }
 
@@ -351,18 +354,18 @@ body {
 }
 
 .project-card {
-  background-color: black;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease;
-  border: 1px solid #b8b4af;
-  width: 23vw;
+    background-color: black;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease;
+    border: 1px solid #b8b4af;
+    width: 23vw;
 }
 
 .project-card:hover {
-  transform: translate3d(0, -13px, 0) !important;
-  box-shadow: 0px 12px 30px 0px rgba(255, 0, 255, 0.7);
+    transform: translate3d(0, -13px, 0) !important;
+    box-shadow: 0px 12px 30px 0px rgba(255, 0, 255, 0.7);
 }
 
 
@@ -567,14 +570,14 @@ section,
     text-decoration: none;
 }
 
-.contact-form {
+#contact-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.contact-form input,
-.contact-form textarea {
+#contact-form input,
+#contact-form textarea {
     padding: 12px 15px;
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -586,7 +589,7 @@ section,
     /* background-color: #8d8a88; */
 }
 
-.contact-form button {
+#contact-form button {
     padding: 12px 20px;
     background-color: magenta;
     color: black;
@@ -600,11 +603,11 @@ section,
     margin-top: 10px;
 }
 
-.contact-form button:hover {
+#contact-form button:hover {
     background-color: #8d8a88;
 }
 
-.contact-form button:active {
+#contact-form button:active {
     background-color: #cfcac7;
 }
 
@@ -613,6 +616,30 @@ section,
     border-radius: 8px;
     overflow: hidden;
     /* height: 90vw; */
+}
+
+.popup {
+    position: fixed;
+    bottom: 100px;
+    right: 60px;
+    background-color: black;
+    color: magenta;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    z-index: 9999;
+    height: 44px;
+    font-size: 1.6vw;
+}
+
+.popup.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 @media (min-width: 768px) {
@@ -804,10 +831,11 @@ hr {
         overflow: hidden;
     }
 
-    .menu-icon{
+    .menu-icon {
         display: block;
     }
-    .navLinks{
+
+    .navLinks {
         transition: all 0.2s;
     }
 
@@ -1023,9 +1051,18 @@ hr {
         /* max-height: 61vh; */
         width: 79vw;
     }
+
     .project-card:hover {
         transform: translateY(-8px);
         /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); */
         box-shadow: 0px 12px 30px 0px rgba(255, 0, 255, 0.7);
+    }
+
+    .popup{
+        position: sticky;
+        top: 150px;
+        height: 44px;
+        background-color: black;
+        font-size: 5.5vw;
     }
 }

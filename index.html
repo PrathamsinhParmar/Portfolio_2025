@@ -68,7 +68,7 @@
                         navbar.style.backgroundColor = 'transparent';
                         navLinks.style.maxHeight = '0px'
                         toggleIcon.style.rotate = '0deg'
-                         icon.style.color = 'magenta';
+                        icon.style.color = 'magenta';
                     }
                 }
 
@@ -208,8 +208,7 @@
                     <div class="project-card" data-aos="zoom-out-right">
                         <img src="taskmanager.png" alt="taskmanager">
                         <div class="project-content">
-                            <h3>Task Manager <span
-                                    class="redAlpha">A</span>pp</h3>
+                            <h3>Task Manager <span class="redAlpha">A</span>pp</h3>
                             <p>A clean and efficient task manager to help you plan, track, and complete your daily
                                 goals.</p>
                             <div class="tech-stack">
@@ -325,12 +324,58 @@
                         </div>
 
                         <!-- Contact Form -->
-                        <form action="https://formspree.io/f/xyyvlabc" method="POST" class="contact-form">
+                        <form action="https://formspree.io/f/mjkrdeog" method="POST" id="contact-form">
                             <input type="text" name="name" placeholder="Your Name" required />
                             <input type="email" name="email" placeholder="Your Email" required />
                             <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
                             <button type="submit">Send Message</button>
                         </form>
+
+                        <div id="popup" class="popup">Message sent successfully ✅</div>
+
+                        <script>
+
+                            // LOGIC FOR FORM : Using Formspree (Start)
+                            document.addEventListener("DOMContentLoaded", function () {
+                                const form = document.getElementById('contact-form');
+                                const popup = document.getElementById('popup');
+
+                                form.addEventListener("submit", async function (e) {
+                                    e.preventDefault();
+
+                                    const data = new FormData(form);
+
+                                    try {
+                                        const response = await fetch(form.action, {
+                                            method: "POST",
+                                            body: data,
+                                            headers: {
+                                                'Accept': 'application/json'
+                                            }
+                                        });
+
+                                        if (response.ok) {
+                                            showPopup("✅ Message sent successfully!");
+                                            form.reset();
+                                        } else {
+                                            showPopup("❌ Something went wrong.");
+                                        }
+                                    } catch (error) {
+                                        showPopup("⚠️ Network error. Try again.");
+                                    }
+                                });
+
+                                function showPopup(message) {
+                                    popup.textContent = message;
+                                    popup.classList.add("show");
+                                    setTimeout(() => {
+                                        popup.classList.remove("show");
+                                    }, 2000);
+                                }
+                            });
+                              // LOGIC FOR FORM : Using Formspree (End)
+                        </script>
+                        <!-- Custom popup -->
 
                     </div>
 
