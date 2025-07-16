@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio website built to showcase my projects, skills, education, and experience as a B.Tech IT student passionate about full-stack web development and AI.
 
-🔗 **Live Website**: [https://prathamsinhparmar.github.io/Prathamsinh_LetsUpgradeFrontendSprint/](https://prathamsinhparmar.github.io/Prathamsinh_LetsUpgradeFrontendSprint/)
+🔗 **Live Website**: [https://prathamsinhparmar.github.io/Prathamsinh_LetsUpgradeFrontendSprint/](https://prathamsinhparmar.github.io/Portfolio_2025/)
 
 ---
 
